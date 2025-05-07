@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sericulture Management - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; /* Light grey background */
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+
+        /* Navbar Enhancements */
+        .navbar {
+            background: linear-gradient(to right, #4a148c, #0056b3) !important; /* Darker gradient */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff !important;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            padding: 0.7rem 1.2rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #fff !important;
+        }
+
+        /* Hero Section - Enhanced */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://c1.wallpaperflare.com/preview/259/307/788/silkworm-silk-worm-cocoon.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 150px 0;
+            position: relative;
+            overflow: hidden; /* For potential background animations */
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: 1.5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            color: #212529;
+            font-weight: 600;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            transform: translateY(-2px);
+        }
+
+        /* About Section - Improved */
+        .about-section {
+            padding: 80px 0;
+            background-color: #fff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #4a148c;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Features Section - Enhanced Cards */
+        .features-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #e0f2f7, #fff); /* Subtle gradient */
+        }
+
+        .features-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #4a148c;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            height: 100%; /* Make cards equal height */
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #777;
+        }
+
+        /* Additional Information Section */
+        .additional-info {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .additional-info h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #4a148c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .additional-info p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* Footer - Modernized */
+        .footer {
+            background-color: #343a40 !important; /* Dark background */
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Subtle Animations (Optional - Requires JavaScript) */
+        /* Example: Fading in elements on scroll */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top"> <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Sericulture Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'add_farmer' %}">Add Farmer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'list_mulberry_farm' %}">Mulberry</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'list_silkworm_batches' %}">Silkworm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+                    {% endif %}
+
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold">Cultivating a Golden Thread</h1>
+            <p class="lead mb-4">Unlock the potential of sericulture with our comprehensive management platform.</p>
+            <a href="#" class="btn btn-lg btn-warning shadow-lg">Explore</a>
+        </div>
+    </header>
+
+    <section class="about-section py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Our Vision for Sericulture</h2>
+            <p class="lead text-center mb-5">We envision a thriving sericulture industry empowered by technology and knowledge, where every farmer can achieve sustainable growth and prosperity.</p>
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <p>Our platform is more than just a tool; it's a community-driven ecosystem designed to support you at every stage of sericulture. From managing your farm and connecting with fellow farmers to accessing the latest market insights and government schemes, we're here to help you succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold"><i class="bi bi-people-fill me-2"></i> Farmer Management</h4>
+                            <p class="card-text">Effortlessly register, track, and manage your network of sericulture farmers. Maintain detailed records and communication logs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold"><i class="bi bi-graph-up me-2"></i> Real-time Market Insights</h4>
+                            <p class="card-text">Stay ahead of the curve with up-to-the-minute market prices, demand forecasts, and trend analysis for silk and related products.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold"><i class="bi bi-bank me-2"></i> Government Scheme Access</h4>
+                            <p class="card-text">Discover and easily access relevant government schemes, subsidies, and support programs designed for sericulture farmers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="additional-info py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Driving Sustainable Sericulture</h2>
+            <p class="lead text-center mb-5">We are committed to fostering sustainable practices in sericulture, promoting environmental responsibility and economic viability for our farmers.</p>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <p>By providing access to modern tools and information, we aim to empower the sericulture community to adopt efficient and eco-friendly techniques, ensuring a prosperous future for generations to come. Join us in our mission to cultivate a sustainable and thriving silk industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-warning text-dark">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Ready to Transform Your Sericulture Practices?</h2>
+            <p class="lead mb-4">Join our growing community of empowered sericulture farmers today!</p>
+            <a href="{% url 'register' %}" class="btn btn-lg btn-primary shadow-lg">Sign Up Now</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">© 2025 Sericulture Management | Cultivating the Future of Silk</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+        // Example: Simple fade-in on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeElements.forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
